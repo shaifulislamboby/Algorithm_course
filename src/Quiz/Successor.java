@@ -16,6 +16,7 @@ public class Successor {
     public int remove( int i){
         if( i == numbers[i])
         {numbers[i] = 0; i = numbers[i+1];}
+
         else
             i = i+1;
 
