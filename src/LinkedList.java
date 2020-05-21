@@ -12,10 +12,10 @@ public class LinkedList {
         }
 
         public void push(String item) {
-            Node oldfirst = first;
+            Node oldFirst = first;
             first = new Node();
             first.item = item;
-            first.next = oldfirst;
+            first.next = oldFirst;
         }
 
         public String pop() {
