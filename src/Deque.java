@@ -128,6 +128,6 @@ public class Deque<Item> implements Iterable<Item> {
         deque.addLast(4);
         deque.removeFirst();
         deque.removeLast();
-        deque.addFirst(8);*/
+        deque.addFirst(8);
     }
 }
