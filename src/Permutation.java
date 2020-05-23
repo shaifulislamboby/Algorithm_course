@@ -3,15 +3,22 @@ import edu.princeton.cs.algs4.StdIn;
 /**
  * Created by spec on 21.04.2017.
  */
-public class Permutation {
-    public static void main(String[] args) {
-        int k = Integer.parseInt(args[0]);
-        RandomizedQueue<String> randomizedQueue = new RandomizedQueue<>();
-        while (!StdIn.isEmpty()) {
-            randomizedQueue.enqueue(StdIn.readString());
-        }
-        for (int i = 0; i < k; i++) {
-            System.out.println(randomizedQueue.dequeue());
-        }
+public class ResizingArrayStackOfStrings {
+String[] s;
+
+    public ResizingArrayStackOfStrings() {
+        s = new String[1];
+    }
+
+    public void push(String item) {
+
+        if (N == s.length) resize(2 * s.length);
+        s[N++] = item;
+    }
+
+    private void resize(int capacity) {
+        String[] copy = new String[capacity];
+        for (int i = 0; i < N; i++) copy[i] = s[i];
+        s = copy;
     }
 }
